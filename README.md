@@ -22,15 +22,21 @@ An Azure subscription is a container for resources in Microsoft Azure. It provid
 ***Resource Groups***:
 A resource group is a container for resources deployed in Azure. It helps in organizing and managing resources, applying consistent policies, and simplifying the billing process.
 
+
 ## Blob – Storage Type and what to store in it 
+
 
 ## Git – Source Control  
 
 a. Pull Request 
+   A Pull Request (PR) is a mechanism in Git for proposing changes from one branch to another. It allows team members to review, discuss, and collaborate on the proposed changes before merging them into the target branch.
 
 b. Branch 
-
+   A Branch in Git is a parallel version of the codebase, allowing developers to work on features or bug fixes independently without affecting the main code. Branches help in organizing and managing development workflows.
+   
 c. Commit 
+   A Commit in Git is a snapshot of changes made to the codebase. It represents a specific point in the version history, and each commit has a unique identifier. Commits help in tracking and reverting changes when needed.
+
 
 ## GitHub 
 GitHub is a web-based platform for hosting and collaborating on Git repositories. It provides features like issue tracking, pull requests, and workflows to enhance collaboration among developers.
