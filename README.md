@@ -44,7 +44,8 @@ Hier ein Beispiel wie man einen Storage-Account deployed:
 
 > [!TIP]
 > Bei Unklarheiten und für weitere Informationen auf folgende Webseite gehen:                                             
->  https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep
+>  https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep                                        
+> https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI
 
 ## Azure-Subscription, Ressourcengruppen 
 
