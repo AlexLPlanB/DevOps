@@ -92,7 +92,7 @@ GitHub ist eine Plattform für das Hosting und die Zusammenarbeit an Git-Reposit
    GitHub Actions ist eine Plattform für Continuous Integration und Continuous Delivery (CI & CD). Mit GitHub Actions kannst du Builds, Tests und Bereitstellungen automatisieren.
 Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pull Requests oder das Bereitstellen von gemergten Pull Requests für die Produktion ausführen können.
 
-***_______________________________________________________________________________________________________________________________________________________***
+***_____________________________________________________________________________________________________________________________***
 
 ## Voraussetzungen für diesen Lernpfad und die folgenden Aufgaben
 
