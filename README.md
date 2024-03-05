@@ -19,10 +19,13 @@ CD automatisiert die Bereitstellung von Codeänderungen in Test-, Staging- und P
 
 IoT (Internet of Things) ist ein Konzept, bei dem physische Geräte, oft Alltagsgegenstände, mit dem Internet verbunden werden, damit sie Daten sammeln und austauschen können. Diese Geräte können miteinander kommunizieren und eine Verbindung zu zentralen Systemen herstellen. Das Ziel des IoT ist es, ein intelligentes und vernetztes Netzwerk zu schaffen, das die Effizienz aller Geräte im Netzwerk steigert und sie besser zusammenarbeiten können. 
 
+![kisspng-internet-of-things-narrowband-iot-technology-lpwan-5b37c647570a03 6535281315303818953565](https://github.com/AlexLPlanB/DevOps/assets/159454517/66526ed0-2e81-40c0-b5de-62d32407ec8b)
+
+
 ## Bicep - Microsoft-Sprache für Ressourcen
 Bicep ist eine domänenspezifische Sprache (DSL), die von Microsoft für die Bereitstellung von Azure-Ressourcen entwickelt wurde. Sie wurde entwickelt, um die Erstellung und Verwaltung von Azure-Ressourcen zu vereinfachen, indem sie im Vergleich zu anderen Sprachen eine besser lesbare Syntax bietet. In einer Bicep-Datei definiert man die Infrastruktur, die man in Azure bereitstellen möchten, und verwenden diese Datei dann während des gesamten Entwicklungslebenszyklus, womit man seine Infrastruktur wiederholt bereitstellen kann. 
 
-Hier ein Beispiel: 
+Hier ein Beispiel wie man einen Storage-Account deployed: 
 
       param location string = resourceGroup().location
       param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}'
@@ -40,58 +43,64 @@ Hier ein Beispiel:
       }
 
 > [!TIP]
-> Bei unklarheiten auf folgende Webseite gehen:                                             
+> Bei Unklarheiten und für weitere Informationen auf folgende Webseite gehen:                                             
 >  https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep
 
 ## Azure-Subscription, Ressourcengruppen 
 
-- ***Azure Subscription***:
+- ***Azure Subscription:***
 Eine Azure Subscription ist ein Container für Ressourcen in Microsoft Azure. Sie bietet eine Möglichkeit, Ressourcen zu verwalten und zu organisieren und den Zugriff auf Azure-Dienste zu kontrollieren.
 
-- ***Resource Groups***:
+- ***Resource Groups:***
 Eine Ressourcengruppe ist ein Container für Ressourcen, die in Azure bereitgestellt werden. Sie hilft bei der Organisation und Verwaltung von Ressourcen, der Anwendung einheitlicher Richtlinien und der Vereinfachung des Abrechnungsprozesses. 
 
 ## Blob - Speichertyp und was darin gespeichert werden soll 
 
 - ***Blob Storage:***
-Azure Blob Storage ist die Objektspeicherlösung von Microsoft für die Cloud. Sie ist für die Speicherung großer Mengen unstrukturierter Daten, wie Text- oder Binärdaten, optimiert.
+Azure Blob Storage ist die Objektspeicherlösung von Microsoft für die Cloud. Sie ist für die Speicherung großer Mengen unstrukturierter Daten, wie Text- oder Binärdaten da.
 
 - ***Nutzen***:
-Der Blob Storage eignet sich für die Speicherung großer Dateien, wie Videos und Bilder, Backups und anderer unstrukturierter Daten.
+Der Blob Storage eignet sich für die Speicherung großer Dateien, wie Videos und Bilder, Backups wichtiger Dateien und anderer unstrukturierter Daten.
 
 - ***Service Principal - Azure-Bereitstellung:***
-   Ein Service Principal in Azure ist eine Sicherheitsidentität, die von Anwendungen, Diensten und Automatisierungstools für den Zugriff auf Azure-Ressourcen verwendet wird. Es bietet eine sichere Möglichkeit für Bereitstellungen und Automatisierungen, mit Azure-Diensten zu interagieren, ohne Benutzeranmeldeinformationen offenlegen zu müssen.
+   Ein Azure-Service Principal ist eine Identität, die zur Verwendung mit Anwendungen, gehosteten Diensten und automatisierten Tools für den Zugriff auf Azure-Ressourcen erstellt wird. Durch die dem Service Principal zugewiesenen Rollen wird dieser Zugriff eingeschränkt, sodass du steuern kannst, welche Ebene auf welche Ressourcen zugegreifen kann.
 
 
 ## Git - Source Control  
 
 - ***Pull Request:***
-   Ein Pull Request (PR) ist ein Mechanismus in Git, um Änderungen von einem Zweig zu einem anderen vorzuschlagen. Er ermöglicht es den Teammitgliedern, die vorgeschlagenen Änderungen zu überprüfen, zu diskutieren und gemeinsam daran zu arbeiten, bevor sie in den Zielzweig eingefügt werden.
+   Ein Pull Request (auch Merge Request) ist ein Ereignis, das auftritt, wenn ein Entwickler eine Anfrage schickt, um Code-Änderungen aus einem Branch mit dem Hauptprojekt-Repository zu verschmelzen. Wenn ein Pull Request akzeptiert wird, spricht man von einem Merge. Wenn er geschlossen wird, spricht man von einem Close.
+   
 
-- ***Branch:*** 
-   Ein Branch in Git ist eine parallele Version der Codebasis, die es den Entwicklern ermöglicht, unabhängig voneinander an Funktionen oder Fehlerbehebungen zu arbeiten, ohne den Hauptcode zu beeinträchtigen. Branches helfen bei der Organisation und Verwaltung von Entwicklungsabläufen.
+- ***Branch:***
+   Ein Branch in Git ist eine parallele Version des Codes, die es den Entwicklern ermöglicht, unabhängig voneinander an Funktionen oder Fehlerbehebungen zu arbeiten, ohne den Hauptcode zu beeinträchtigen. Branches helfen bei der Organisation und Verwaltung von Entwicklungsabläufen.
    
 - ***Commit:***
-   Ein Commit in Git ist ein Schnappschuss von Änderungen, die an der Codebasis vorgenommen wurden. Er stellt einen bestimmten Punkt in der Versionsgeschichte dar, und jeder Commit hat einen eindeutigen Bezeichner. Commits helfen dabei, Änderungen zu verfolgen und bei Bedarf rückgängig zu machen.
+   Als Commit in Git bezeichnet man den Vorgang des Einspielens von neuem oder geändertem Quelltext und anderen Dateien in das Versionsverwaltungssystem.
+  Wenn ein Entwickler Änderungen an seinem Code vornimmt und diese für andere zugänglich machen will, erstellt er einen Commit.
+  Ein Commit ist eine Art Screenshot des Projekts zu einem bestimmten Zeitpunkt. Es speichert den aktuellen Zustand der Dateien und Änderungen.
+  Die Änderungen werden dann im Repository festgehalten, welche dann von anderen Entwicklerngenutzt werden können.
 
 
 ## GitHub 
-GitHub ist eine webbasierte Plattform für das Hosting und die Zusammenarbeit an Git-Repositories. Sie bietet Funktionen wie Issue Tracking, Pull Requests und Workflows zur Verbesserung der Zusammenarbeit zwischen Entwicklern.
+GitHub ist eine Plattform für das Hosting und die Zusammenarbeit an Git-Repositories. Sie bietet Funktionen wie Issue Tracking, Pull Requests und Workflows zur Verbesserung der Zusammenarbeit zwischen Entwicklern.
 
 - ***Repository:***
-   Ein Repository in GitHub ist ein Container für ein Projekt, der Code, Dokumentation und verwandte Ressourcen enthält. Es ermöglicht die Versionskontrolle und
+   Ein Repository (kurz Repo) in GitHub ist ein verwalteter Container für ein Projekt, der Code, Dokumentationen und andere Ressourcen enthält. Entwickler können damit Änderungen einshen, bearbeiten und wieder einsenden mit deren Veränderungen und Protokollen.
 
 - ***Action:*** 
-   GitHub-Actions sind automatisierte Workflows, die durch Ereignisse in einem GitHub-Repository ausgelöst werden. Sie ermöglichen eine kontinuierliche Integration und Bereitstellung, so dass Entwickler Aufgaben wie das Erstellen, Testen und Bereitstellen von Code automatisieren können.
+   GitHub Actions ist eine Plattform für Continuous Integration und Continuous Delivery (CI & CD). Mit GitHub Actions kannst du Builds, Tests und Bereitstellungen automatisieren.
+Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pull Requests oder das Bereitstellen von gemergten Pull Requests für die Produktion ausführen können.
 
+***_______________________________________________________________________________________________________________________________________________________***
 
 ## Voraussetzungen für diesen Lernpfad und die folgenden Aufgaben
 
 1. Visual Studio Code und Bicep als Ressourcenvorlage installieren 
 2. Informiere dich über mehr Biceps und versuch es so gut wie möglich zu verstehen 
 3. Installiere PowerShell Core mit der Azure-Erweiterung 
-- [Powershell Core für Windows](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2) 
-- [Azure Az Powershell module](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep)
+      - [Powershell Core für Windows](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2) 
+      - [Azure Az Powershell module](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep)
 
 4. Authentifizieren dich bei Azure für dein Abonnement und deine eigene Ressourcengruppe
 
@@ -99,7 +108,8 @@ GitHub ist eine webbasierte Plattform für das Hosting und die Zusammenarbeit an
 ## Die ersten Schritte
 
 1. Erstelle dein erstes Template (Vorlage) für deinen Storage Account
-   [Microsoft.Storage storageAccounts](https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?pivots=deployment-language-bicep)
+   - [Microsoft.Storage storageAccounts](https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?pivots=deployment-language-bicep)
+
 2. Das Template sollte ein Parameter für für den Namen des Storage Accounts besitzen
 3. Bereitstellen des Templates für deine Ressourcengruppe mit PowerShell
 4. Authentifizieren dich mit Azure bei deiner Abonnement- und Ressourcengruppe
