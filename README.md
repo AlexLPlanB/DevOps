@@ -109,7 +109,6 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 ## Die ersten Schritte
 
 1. Erstelle dein erstes Template (Vorlage) für deinen Storage Account
-   - [Microsoft.Storage storageAccounts](https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?pivots=deployment-language-bicep)
 
 2. Das Template sollte ein Parameter für für den Namen des Storage Accounts besitzen
 3. Bereitstellen des Templates für deine Ressourcengruppe mit PowerShell
