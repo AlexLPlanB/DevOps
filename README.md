@@ -115,11 +115,12 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 3. Bereitstellen des Templates für deine Ressourcengruppe mit PowerShell
 4. Authentifizieren dich mit Azure bei deiner Abonnement- und Ressourcengruppe
 
+> [!TIP]
+> Die folgende Webseite kann der Erstellung des ersten Templates helfen:                                                                                       
+> https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/
+                                                                                                                        
 
-# Userstorys
-
-## Story 1:
-***Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:***
+## Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:
 
 - Virtual Machines
 
