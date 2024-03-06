@@ -119,8 +119,19 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 # Userstorys
 
 ## Story 1:
+***Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:***
+
+- Virtual Machines
 
 
+- Azure App Service
+
+
+- Containers in Azure
+
+
+- Azure Functions
+      
 
 ## Story 2:
 
