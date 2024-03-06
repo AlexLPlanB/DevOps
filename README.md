@@ -114,3 +114,20 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 2. Das Template sollte ein Parameter für für den Namen des Storage Accounts besitzen
 3. Bereitstellen des Templates für deine Ressourcengruppe mit PowerShell
 4. Authentifizieren dich mit Azure bei deiner Abonnement- und Ressourcengruppe
+
+
+# Userstorys
+
+## Story 1:
+
+
+
+## Story 2:
+
+
+
+## Story 3:
+
+
+
+## Story 4:
