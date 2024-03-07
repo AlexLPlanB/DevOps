@@ -153,12 +153,7 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 > Wenn du eine Web-App hosten willst würde ich Azure Service App empfehlen. Sie erfüllt alle notwendigen Anforderungen und die Automatisierung mit GitHub vereinfacht den Arbeitsablauf erheblich.
 Für eine einfache Dokumentation, wie man eine Website einrichtet, ist [dieses Tutorial](https://medium.com/@farzam_m/getting-started-with-azure-bicep-deploying-a-hello-world-web-application-ae144535749d) hilfreich.
 
-## Story 2:
+# Aufgaben
 
-
-
-## Story 3:
-
-
-
-## Story 4:
+> [!NOTE]
+> Die Dokus der einzlenen Aufgaben befinden können in den Userstory Ordnern gefunden werden. 
