@@ -1,5 +1,16 @@
 # ***SYS-Lernpfad DevOps***
 
+<p>
+
+
+
+                
+
+
+
+      
+</p>
+
 > [!NOTE]
 > Dieses Projekt dient dazu, einen kurzen Überblick über das Thema DevOps zu bieten. Wir werden hauptsächlich mit Azure von Microsoft arbeiten und werden uns Tools und Konzepte anschauen, um das Verwalten eines Projektes über Git einfacher zu gestalten und das erledigen von Aufgaben zu automatisieren. Keine Garantie auf Richtigkeit!                           
 
