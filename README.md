@@ -1,7 +1,7 @@
 # ***SYS-Lernpfad DevOps***
 
 > [!NOTE]
-> Dieses Projekt dient dazu, einen kurzen Überblick über das Thema DevOps zu bieten. Wir werden hauptsächlich mit Azure von Microsoft arbeiten und werden uns Tools und Konzepte anschauen, um das Verwalten eines Projektes über Git einfacher zu gestalten und das erledigen von Aufgaben zu automatisieren.                              
+> Dieses Projekt dient dazu, einen kurzen Überblick über das Thema DevOps zu bieten. Wir werden hauptsächlich mit Azure von Microsoft arbeiten und werden uns Tools und Konzepte anschauen, um das Verwalten eines Projektes über Git einfacher zu gestalten und das erledigen von Aufgaben zu automatisieren. Keine Garantie auf Richtigkeit!                           
 
 ## DevOps - die Praxis, nicht Azure DevOps die Plattform (CD & CI)
 
@@ -121,17 +121,25 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 
 ## Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:
 
-- Virtual Machines
+- ***Virtual Machines***
+
+  Azure Virtual Machines ermöglichen die Bereitstellung von VMs in der Cloud. Für die Erstellung von Webanwendungen können Entwickler eine VM konfigurieren, das gewünschte Betriebssystem installieren und die 
+  erforderlichen Softwarekomponenten hinzufügen. Dies bietet maximale Flexibilität und Kontrolle über die Umgebung.
 
 
-- Azure App Service
+- ***Azure App Service***
 
+  Der Azure App Service ist eine vollständig verwaltete Plattform für das Erstellen, Bereitstellen und Skalieren von Webanwendungen. Entwickler können verschiedene App-Typen hosten, einschließlich Web-Apps, mobile Apps 
+  und APIs. Der App Service bietet automatische Skalierung, kontinuierliche Bereitstellung und integrierte Überwachung.
 
-- Containers in Azure
+- ***Containers in Azure***
 
+  Azure bietet umfassende Unterstützung für Container mit Azure Kubernetes Service (AKS) und Azure Container Instances (ACI). Entwickler können Container für ihre Webanwendungen verwenden, um konsistente Bereitstellungen und
+  Skalierbarkeit zu gewährleisten.
 
-- Azure Functions
-      
+- ***Azure Functions***
+
+  Azure Functions ermöglichen die serverlose Ausführung von Code in Reaktion auf Ereignisse. Entwickler können Funktionen erstellen, die automatisch auf HTTP-Anforderungen, Datenänderungen oder zeitgesteuerte Ereignisse reagieren.
 
 ## Story 2:
 
