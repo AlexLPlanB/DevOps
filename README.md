@@ -43,9 +43,7 @@ Hier ein Beispiel wie man einen Storage-Account deployed:
       }
 
 > [!TIP]
-> Bei Unklarheiten und für weitere Informationen auf folgende Webseite gehen:                                             
->  https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep                                        
-> https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI
+> Bei Unklarheiten und für weitere Informationen auf [diese Webseite](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI) gehen.                                    
 
 ## Azure-Subscription, Ressourcengruppen 
 
@@ -115,8 +113,7 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 4. Authentifizieren dich mit Azure bei deiner Abonnement- und Ressourcengruppe
 
 > [!TIP]
-> Die folgende Webseite kann der Erstellung des ersten Templates helfen:                                                                                       
-> https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/
+> [Diese Webseite](https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/) kann der Erstellung des ersten Templates helfen:                                                                                       
                                                                                                                         
 
 ## Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:
@@ -140,6 +137,10 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 - ***Azure Functions***
 
   Azure Functions ermöglichen die serverlose Ausführung von Code in Reaktion auf Ereignisse. Entwickler können Funktionen erstellen, die automatisch auf HTTP-Anforderungen, Datenänderungen oder zeitgesteuerte Ereignisse reagieren.
+
+> [!TIP]
+> Wenn du eine Web-App hosten willst würde ich Azure Service App empfehlen. Sie erfüllt alle notwendigen Anforderungen und die Automatisierung mit GitHub vereinfacht den Arbeitsablauf erheblich.
+Für eine einfache Dokumentation, wie man eine Website einrichtet, ist [dieses Tutorial](https://medium.com/@farzam_m/getting-started-with-azure-bicep-deploying-a-hello-world-web-application-ae144535749d) hilfreich.
 
 ## Story 2:
 
