@@ -1,6 +1,7 @@
 # SYS-Lernpfad DevOps
 ## Dokumentation zur Nutzung des Skripts "testIotConnection.ps1"
-Dieses Skript und seine Dokumentation dienen dazu, eine Nachricht an einen Azure IoT Hub zu senden und diese Nachricht in einem Blob-Container zu speichern. Anschließend wird die Nachricht als JSON-Datei heruntergeladen und überprüft, ob die Übermittlung erfolgreich war. Die vollständige Datei findest du hier.
+Dieses Skript und seine Dokumentation dienen dazu, eine Nachricht an einen Azure IoT Hub zu senden und diese Nachricht in einem Blob-Container zu speichern. Anschließend wird die Nachricht als JSON-Datei heruntergeladen und überprüft, ob die Übermittlung erfolgreich war. Die vollständige Datei findest du [hier](https://github.com/AlexanderLPB/DevOps/blob/main/Userstorys/two_three/testIotConnection.ps1) oder im Ordner two_three.
+
 
 Zuerst loggen wir uns in Azure ein:
 
