@@ -4,7 +4,7 @@ param (
  
 function DeployTestToDev {
     Write-Host "Deploying to Dev environment..."
-    az deployment group create --resource NAME_OF_YOUR_RESSOURCE_GROUP --template-file Userstorys\two_three\iotsetup.bicep --parameters Userstorys\two_three\main.json --confirm-with-what-if
+    az deployment group create --resource NAME_OF_YOUR_RESSOURCE_GROUP --template-file Userstorys\two_three\iotsetup.bicep --parameters Userstorys\two_three\dev.json --confirm-with-what-if
 }
  
 function DeployTestToTest {
