@@ -1,5 +1,5 @@
 param name string = 'NAME_OF_YOUR_Storage_Account'
-param location string = 'YOUR_Location(z.B. westeurope)' 
+param location string = resourceGroup().location
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = { // Nutze immer die neuste Version
   name: name
