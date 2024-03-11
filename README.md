@@ -1,7 +1,18 @@
 # ***SYS-Lernpfad DevOps***
 
+<p>
+
+
+
+                
+
+
+
+      
+</p>
+
 > [!NOTE]
-> Dieses Projekt dient dazu, einen kurzen Überblick über das Thema DevOps zu bieten. Wir werden hauptsächlich mit Azure von Microsoft arbeiten und werden uns Tools und Konzepte anschauen, um das Verwalten eines Projektes über Git einfacher zu gestalten und das erledigen von Aufgaben zu automatisieren.                              
+> Dieses Projekt dient dazu, einen kurzen Überblick über das Thema DevOps zu bieten. Wir werden hauptsächlich mit Azure von Microsoft arbeiten und werden uns Tools und Konzepte anschauen, um das Verwalten eines Projektes über Git einfacher zu gestalten und das erledigen von Aufgaben zu automatisieren. Keine Garantie auf Richtigkeit!                           
 
 ## DevOps - die Praxis, nicht Azure DevOps die Plattform (CD & CI)
 
@@ -43,9 +54,7 @@ Hier ein Beispiel wie man einen Storage-Account deployed:
       }
 
 > [!TIP]
-> Bei Unklarheiten und für weitere Informationen auf folgende Webseite gehen:                                             
->  https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep                                        
-> https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI
+> Bei Unklarheiten und für weitere Informationen auf [diese Webseite](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI) gehen.                                    
 
 ## Azure-Subscription, Ressourcengruppen 
 
@@ -109,25 +118,42 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 ## Die ersten Schritte
 
 1. Erstelle dein erstes Template (Vorlage) für deinen Storage Account
-   - [Microsoft.Storage storageAccounts](https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?pivots=deployment-language-bicep)
 
 2. Das Template sollte ein Parameter für für den Namen des Storage Accounts besitzen
 3. Bereitstellen des Templates für deine Ressourcengruppe mit PowerShell
 4. Authentifizieren dich mit Azure bei deiner Abonnement- und Ressourcengruppe
 
+> [!TIP]
+> [Diese Webseite](https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/) kann der Erstellung des ersten Templates helfen:                                                                                       
+                                                                                                                        
 
-# Userstorys
+## Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:
 
-## Story 1:
+- ***Virtual Machines***
 
-
-
-## Story 2:
-
-
-
-## Story 3:
+  Azure Virtual Machines ermöglichen die Bereitstellung von VMs in der Cloud. Für die Erstellung von Webanwendungen können Entwickler eine VM konfigurieren, das gewünschte Betriebssystem installieren und die 
+  erforderlichen Softwarekomponenten hinzufügen. Dies bietet maximale Flexibilität und Kontrolle über die Umgebung.
 
 
+- ***Azure App Service***
 
-## Story 4:
+  Der Azure App Service ist eine vollständig verwaltete Plattform für das Erstellen, Bereitstellen und Skalieren von Webanwendungen. Entwickler können verschiedene App-Typen hosten, einschließlich Web-Apps, mobile Apps 
+  und APIs. Der App Service bietet automatische Skalierung, kontinuierliche Bereitstellung und integrierte Überwachung.
+
+- ***Containers in Azure***
+
+  Azure bietet umfassende Unterstützung für Container mit Azure Kubernetes Service (AKS) und Azure Container Instances (ACI). Entwickler können Container für ihre Webanwendungen verwenden, um konsistente Bereitstellungen und
+  Skalierbarkeit zu gewährleisten.
+
+- ***Azure Functions***
+
+  Azure Functions ermöglichen die serverlose Ausführung von Code in Reaktion auf Ereignisse. Entwickler können Funktionen erstellen, die automatisch auf HTTP-Anforderungen, Datenänderungen oder zeitgesteuerte Ereignisse reagieren.
+
+> [!TIP]
+> Wenn du eine Web-App hosten willst würde ich Azure Service App empfehlen. Sie erfüllt alle notwendigen Anforderungen und die Automatisierung mit GitHub vereinfacht den Arbeitsablauf erheblich.
+Für eine einfache Dokumentation, wie man eine Website einrichtet, ist [dieses Tutorial](https://medium.com/@farzam_m/getting-started-with-azure-bicep-deploying-a-hello-world-web-application-ae144535749d) hilfreich.
+
+# Aufgaben
+
+> [!NOTE]
+> Die Dokus der einzlenen Aufgaben befinden können in den Userstory Ordnern gefunden werden. 
