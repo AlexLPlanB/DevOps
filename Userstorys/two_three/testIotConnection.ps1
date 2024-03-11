@@ -1,8 +1,8 @@
-$iotHubName = "alexslsiotHub5vapktontszz6"
-$storage = "alexslsiot5vapktontszz6"
-$deviceId = "AlexsDevice"
-$message = "Moin"
-$containerName = "alexsiotblob"
+$iotHubName = "YOUR_IOT_HUB_NAME"
+$storage = "YOUR_STORAGE_NAME"
+$deviceId = "YOUR_DEVICE_NAME"
+$message = "YOUR_MESSAGE"
+$containerName = "YOUR_CONTAINER_NAME"
 
 $destinationPath = "Userstorys\two_three\response.json"
 
