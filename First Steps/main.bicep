@@ -14,7 +14,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = { // Nu
 }
 
 resource blobConatiner 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01' = {
-  name: '${name}/default/NAME_OF_YOUR_BLOB' // Bennene deinen Blob
+  name: '${name}/default/NAME_OF_YOUR_BLOB' // Benenne deinen Blob
 }
 
 output storageId string = storageAccount.id
