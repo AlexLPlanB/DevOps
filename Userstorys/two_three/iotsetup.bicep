@@ -1,4 +1,4 @@
-param demoName string = 'alexslsiot'
+param demoName string = 'NAME_OF_YOUR_IOT_HUB'
 param location string = resourceGroup().location
 param skuName string = 'S1'
 param skuUnits int = 1
@@ -189,14 +189,14 @@ resource srcControls 'Microsoft.Web/sites/sourcecontrols@2023-01-01' = {
   parent: functionApp
   name: 'web'
   properties: {
-    repoUrl: 'https://github.com/AlexLPlanB/DevOps'
+    repoUrl: 'https://github.com/NAME_OF_YOUR_GITHUB_ACCOUNT'
     branch: repositoryBranch
     isManualIntegration: true
   }
 }
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2023-01-01' = {
-  name: 'alexsAppServicePlan'
+  name: 'NAME_OF_YOUR_SERVICE_PLAN'
   location: location
   sku: {
     name: 'F1'
