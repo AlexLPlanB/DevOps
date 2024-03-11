@@ -14,4 +14,4 @@ Zuerst müssen die notwendigen Eigenschaften definiert werden:
     $containerName = "DEIN_CONTAINER_NAME"
     $destinationPath = "Userstorys\two_three\response.json"
 
-Nun werden wir die Aktuelle Zeit abspeichern um 
+Nun werden wir die Aktuelle Zeit abspeichern um die Nachricht anschließend nach der Uhrzeit zu bennenen, um einen besseren Überblick über alle Messenges zu erhalten und um doppelte Bennenungen zu vermeiden. 
