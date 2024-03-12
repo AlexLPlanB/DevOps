@@ -1,16 +1,5 @@
 # ***SYS-Lernpfad DevOps***
 
-<p>
-
-
-
-                
-
-
-
-      
-</p>
-
 > [!NOTE]
 > Dieses Projekt dient dazu, einen kurzen Überblick über das Thema DevOps zu bieten. Wir werden hauptsächlich mit Azure von Microsoft arbeiten und werden uns Tools und Konzepte anschauen, um das Verwalten eines Projektes über Git einfacher zu gestalten und das erledigen von Aufgaben zu automatisieren. Keine Garantie auf Richtigkeit!                           
 
@@ -84,6 +73,7 @@ Der Blob Storage eignet sich für die Speicherung großer Dateien, wie Videos un
 
 - ***Branch:***
    Ein Branch in Git ist eine parallele Version des Codes, die es den Entwicklern ermöglicht, unabhängig voneinander an Funktionen oder Fehlerbehebungen zu arbeiten, ohne den Hauptcode zu beeinträchtigen. Branches helfen bei der Organisation und Verwaltung von Entwicklungsabläufen.
+
    
 - ***Commit:***
    Als Commit in Git bezeichnet man den Vorgang des Einspielens von neuem oder geändertem Quelltext und anderen Dateien in das Versionsverwaltungssystem.
@@ -101,6 +91,7 @@ GitHub ist eine Plattform für das Hosting und die Zusammenarbeit an Git-Reposit
 - ***Action:*** 
    GitHub Actions ist eine Plattform für Continuous Integration und Continuous Delivery (CI & CD). Mit GitHub Actions kannst du Builds, Tests und Bereitstellungen automatisieren.
 Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pull Requests oder das Bereitstellen von gemergten Pull Requests für die Produktion ausführen können.
+
 
 ***_____________________________________________________________________________________________________________________________***
 
@@ -130,8 +121,7 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 ## Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:
 
 - ***Static Web App***
-
-
+Eine Static Web App ist eine Webanwendung, die hauptsächlich aus statischen Inhalten wie HTML, CSS, JavaScript und Bild-Ressourcen besteht. Im Gegensatz zu herkömmlichen Webservern werden die statischen Ressourcen von einem herkömmlichen Webserver getrennt und über weltweit verteilte Punkte bereitgestellt, was die Bereitstellung für Endbenutzer beschleunigt. API-Endpunkte werden mithilfe einer serverlosen Architektur gehostet, wodurch kein vollwertiger Back-End-Server erforderlich ist. Ein Beispiel für einen solchen Dienst ist Azure Static Web Apps, der automatisch Web-Apps basierend auf einem Coderepository erstellt und in Azure bereitstellt.
 
 - ***Azure App Service***
 
