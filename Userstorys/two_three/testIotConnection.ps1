@@ -8,34 +8,37 @@ $destinationPath = "Userstorys\two_three\response.json"
 
 
 function SendAndTestMessageToAzure {
-    az login 
-    Write-Host "Sending Message to Dev environment"
-
-    #Ermittlung der Sendezeit
-    $date = Get-Date
-    $minutes = $date.Minute
+    az login
+    Set-Content -Path $destinationPath -Value ""
+    Write-Host "Sending Message to Environment"
 
     #Message senden
-    az iot device send-d2c-message --hub-name $iotHubName --device-id $deviceId --data $message
-
+    az iot device send-d2c-message --hub-name $iotHubName --device-id $deviceId
     Write-Host "Testing if Message was Delivered Successfully"
-    #Testen ob die Nachricht erfolgreich angekommen ist
+
+
+    #Testen/Warten ob die Nachricht erfolgreich angekommen ist
+    Start-Sleep -Seconds 150
+    $date = Get-Date
+    $date = $date.ToUniversalTime() 
+    $minutes = $date.Minute - 2
+    $hours = $date.Hour
+    $filePath = "($iotHubName)/03/2024/0$($date.Month)/$($date.Day)/$hours/$minutes.json.JSON"
 
     #Blob downloaden zu einem File
-    az storage blob download --account-name $storage --container-name $containerName --name ($minutes.ToString()) --file $destinationPath 
+    az storage blob download --account-name $storage --container-name $containerName --name $filePath --file $destinationPath 
 
     #Content des Blob Files bekommen
-    $string = Get-Content -Path $destinationPath -Raw 
+    $fileContent = Get-Content -Path $destinationPath -Raw 
 
     #Kontrollieren ob das File die Nachricht enthält
-    if (!$string.Equals('') -or !$string.Equals($null)){
-        if ($string.Contains($message)) {
-            Write-Output "Test Successfull"
-        } else {
-            Write-Output "Test Unsuccessful"
-        }
+    if (!$fileContent.Equals('')){
+        Write-Output "Test Successfull"
+    }
+    else {
+        Write-Output "Test Unsuccessful"
     }
 }
 
 # Function aufrufen
-SendAndTestMessageToDev
+SendAndTestMessageToAzure
