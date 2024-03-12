@@ -129,12 +129,6 @@ Du kannst Workflows erstellen, die Aufgaben wie das Testen und Erstellen von Pul
 
 ## Eine kurze Dokumentation über die Ressourcen in Azure, die genutzt werden können um Web Apps zu erstellen:
 
-- ***Virtual Machines***
-
-  Azure Virtual Machines ermöglichen die Bereitstellung von VMs in der Cloud. Für die Erstellung von Webanwendungen können Entwickler eine VM konfigurieren, das gewünschte Betriebssystem installieren und die 
-  erforderlichen Softwarekomponenten hinzufügen. Dies bietet maximale Flexibilität und Kontrolle über die Umgebung.
-
-
 - ***Azure App Service***
 
   Der Azure App Service ist eine vollständig verwaltete Plattform für das Erstellen, Bereitstellen und Skalieren von Webanwendungen. Entwickler können verschiedene App-Typen hosten, einschließlich Web-Apps, mobile Apps 
