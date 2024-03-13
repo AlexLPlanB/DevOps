@@ -14,7 +14,7 @@ function SendAndTestMessageToAzure {
     Write-Host "Sending Message to Environment"
     az iot device send-d2c-message -n $iotHubName -d $deviceId --props '$.ct=application/json;$.ce=utf-8' --data-file-path $message
 
-    #Testen/Warten ob die Nachricht erfolgreich angekommen ist
+    #File Pfad mithilfe der UTC-Zeit ermitteln
     $DateTime = Get-Date
     $utcTime = $DateTime.ToUniversalTime()
     $year = $utcTime.Year.ToString("0000")
