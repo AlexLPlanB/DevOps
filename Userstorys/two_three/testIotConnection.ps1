@@ -1,41 +1,50 @@
 $iotHubName = "alexslsiotHub5vapktontszz6"
 $storage = "alexslsiot5vapktontszz6"
 $deviceId = "AlexsDevice"
-$message = "Moin"
+$message = "C:\Users\Alexander.Lindel\OneDrive - PlanB. GmbH\DevOps\DevOps\Userstorys\two_three\message.json"
 $containerName = "alexsiotblob"
-
-$destinationPath = "Userstorys\two_three\response.json"
+$destinationPath = "response.json"
 
 
 function SendAndTestMessageToAzure {
-    az login 
-    Write-Host "Sending Message to Dev environment"
-
-    #Ermittlung der Sendezeit
-    $date = Get-Date
-    $minutes = $date.Minute
+    az login
+    Set-Content -Path $destinationPath -Value ""
 
     #Message senden
-    az iot device send-d2c-message --hub-name $iotHubName --device-id $deviceId --data $message
+    Write-Host "Sending Message to Environment"
+    az iot device send-d2c-message -n $iotHubName -d $deviceId --props '$.ct=application/json;$.ce=utf-8' --data-file-path $message
 
-    Write-Host "Testing if Message was Delivered Successfully"
-    #Testen ob die Nachricht erfolgreich angekommen ist
+    #Testen/Warten ob die Nachricht erfolgreich angekommen ist
+    $DateTime = Get-Date
+    $utcTime = $DateTime.ToUniversalTime()
+    $year = $utcTime.Year.ToString("0000")
+    $month = $utcTime.Month.ToString("00")
+    $day = $utcTime.Day.ToString("00")
+    $hour = $utcTime.Hour.ToString("00")
+    $minute = $utcTime.Minute.ToString("00")
+    $utcString = "$year/$month/$day/$hour/$minute"
+    $filePath = "${iotHubName}/03/${utcString}.JSON" #Wenn es hier zu einem Fehler kommt kann die 3 zu einer beliebigen Partitionsnummer geändert werden
+    Write-Host $filePath
+
+    Start-Sleep -Seconds 140
 
     #Blob downloaden zu einem File
-    az storage blob download --account-name $storage --container-name $containerName --name ($minutes.ToString()) --file $destinationPath 
+    Write-Host "Testing if Message was Delivered Successfully"
+    az storage blob download --account-name $storage --container-name $containerName --name $filePath --file $destinationPath
 
     #Content des Blob Files bekommen
-    $string = Get-Content -Path $destinationPath -Raw 
+    $fileContent = Get-Content -Path $destinationPath -Raw 
+    $msg = Get-Content -Path $message 
+
 
     #Kontrollieren ob das File die Nachricht enthält
-    if (!$string.Equals('') -or !$string.Equals($null)){
-        if ($string.Contains($message)) {
-            Write-Output "Test Successfull"
-        } else {
-            Write-Output "Test Unsuccessful"
-        }
+    if ($fileContent.Contains($msg)){
+        Write-Output "Test Successfull"
+    }
+    else {
+        Write-Output "Test Unsuccessful"
     }
 }
 
 # Function aufrufen
-SendAndTestMessageToDev
+SendAndTestMessageToAzure

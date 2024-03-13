@@ -1,30 +1,21 @@
 param demoName string = 'alexslsiot'
 param location string = resourceGroup().location
-param skuName string = 'S1'
+param id string = resourceGroup().id
+param skuName string = 'F1'
 param skuUnits int = 1
 param d2cPartitions int = 4
 
 // Konfiguration des IoT-Hubs und des Speicherkontos
-var iotHubName = '${demoName}Hub${uniqueString(resourceGroup().id)}'
-var storageAccountName = '${toLower(demoName)}${uniqueString(resourceGroup().id)}'
+var iotHubName = 'iot${demoName}Hub${id}'
+var storageAccountName = '${toLower(demoName)}${id}'
 var storageEndpoint = '${demoName}StorageEndpont'
 var storageContainerName = '${toLower(demoName)}results'
 param repositoryBranch string = 'main'
 
 // Azure Function-Konfiguration
-@description('The language worker runtime to load in the function app.')
-@allowed([
-  'node'
-  'dotnet'
-  'java'
-  'python'
-])
-param runtime string = 'python'
-
 var functionAppName = demoName
 var hostingPlanName = demoName
-var applicationInsightsName = demoName
-var functionWorkerRuntime = runtime
+var functionWorkerRuntime = 'python'
 
 // Storage Account Erstellung
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
@@ -77,9 +68,9 @@ resource IoTHub 'Microsoft.Devices/IotHubs@2023-06-30' = {
       }
       routes: [
         {
-          name: 'ContosoStorageRoute'
+          name: 'yourtestroute'
           source: 'DeviceMessages'
-          condition: 'level="storage"'
+          condition: 'true'
           endpointNames: [
             storageEndpoint
           ]
@@ -122,7 +113,7 @@ resource hostingPlan 'Microsoft.Web/serverfarms@2023-01-01' = {
   name: hostingPlanName
   location: location
   sku: {
-    name: 'Y1'
+    name: 'F1'
     tier: 'Dynamic'
   }
   properties: {}
@@ -160,10 +151,6 @@ resource functionApp 'Microsoft.Web/sites@2023-01-01' = {
           value: '~10'
         }
         {
-          name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
-          value: applicationInsights.properties.InstrumentationKey
-        }
-        {
           name: 'FUNCTIONS_WORKER_RUNTIME'
           value: functionWorkerRuntime
         }
@@ -175,16 +162,6 @@ resource functionApp 'Microsoft.Web/sites@2023-01-01' = {
   }
 }
 
-resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
-  name: applicationInsightsName
-  location: location
-  kind: 'web'
-  properties: {
-    Application_Type: 'web'
-    Request_Source: 'rest'
-  }
-}
-
 resource srcControls 'Microsoft.Web/sites/sourcecontrols@2023-01-01' = {
   parent: functionApp
   name: 'web'
@@ -192,17 +169,5 @@ resource srcControls 'Microsoft.Web/sites/sourcecontrols@2023-01-01' = {
     repoUrl: 'https://github.com/AlexLPlanB/DevOps'
     branch: repositoryBranch
     isManualIntegration: true
-  }
-}
-
-resource appServicePlan 'Microsoft.Web/serverfarms@2023-01-01' = {
-  name: 'alexsAppServicePlan'
-  location: location
-  sku: {
-    name: 'F1'
-  }
-  kind: 'app'
-  properties: {
-    reserved: false
   }
 }

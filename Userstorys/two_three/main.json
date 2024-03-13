@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "textToReplaceSubtitleWith": {
-        "value": "This site was released to Azure using a Bicep file."
+        "value": "This site was released to Azure using a Bicep file"
       }
     }
   }

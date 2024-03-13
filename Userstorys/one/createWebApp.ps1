@@ -2,8 +2,6 @@ param (
     [string]$environment
 )
 
-az login
- 
 function DeployToDev {
     Write-Host "Deploying to Dev environment..."
     az deployment group create --resource rg-alexander-lindel --template-file deploy-app.bicep --parameters Userstorys\one\dev.json --confirm-with-what-if
