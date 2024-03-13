@@ -1,9 +1,9 @@
-$iotHubName = "alexslsiotHub5vapktontszz6"
-$storage = "alexslsiot5vapktontszz6"
-$deviceId = "AlexsDevice"
-$message = "C:\Users\Alexander.Lindel\OneDrive - PlanB. GmbH\DevOps\DevOps\Userstorys\two_three\message.json"
-$containerName = "alexsiotblob"
-$destinationPath = "response.json"
+$iotHubName = "YOUR_IOT_HUB_HERE"
+$storage = "YOUR_STORAGE_NAME_HERE"
+$deviceId = "YOUR_DEVICE_NAME_HERE"
+$message = ".\Userstorys\two_three\message.json" # Der Pfad muss eventuell angepasst werden
+$containerName = "NAME_OF_YOUR_BLOB"
+$destinationPath = "response.json" # Der Pfad muss eventuell angepasst werden
 
 
 function SendAndTestMessageToAzure {
@@ -48,3 +48,6 @@ function SendAndTestMessageToAzure {
 
 # Function aufrufen
 SendAndTestMessageToAzure
+
+// Zum ausführen des Projekts benutze:
+// .\testIotConnection.ps1 

@@ -29,3 +29,7 @@ elseif ($environment -eq 'main') {
 else {
     Write-Host "Invalid environment parameter. Please use 'dev', 'test', or 'main'."
 }
+
+// Zum ausführen des Projekts benutze:
+// .\deployTest.ps1 Environment dev
+// dev, test oder main als Environment möglich

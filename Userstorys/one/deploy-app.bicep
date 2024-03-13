@@ -38,3 +38,5 @@ resource appService 'Microsoft.Web/sites@2023-01-01' = {
     }
   }
 }
+
+// Um das Projekt zu deployen gehe zu "createWebApp.ps1 und nutze den ganz unten geschrieben Command 
