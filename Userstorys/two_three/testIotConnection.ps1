@@ -48,3 +48,6 @@ function SendAndTestMessageToAzure {
 
 # Function aufrufen
 SendAndTestMessageToAzure
+
+// Zum ausführen des Projekts benutze:
+// .\testIotConnection.ps1 
