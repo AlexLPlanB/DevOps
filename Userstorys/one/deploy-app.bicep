@@ -2,7 +2,7 @@ param location string = resourceGroup().location
 param textToReplaceSubtitleWith string = 'Default Text'
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2023-01-01' = {
-  name: 'alexsAppServicePlan'
+  name: 'NAME_OF_YOUR_SERVICEPLAN'
   location: location
   sku: {
     name: 'F1'
@@ -14,7 +14,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2023-01-01' = {
 }
 
 resource appService 'Microsoft.Web/sites@2023-01-01' = {
-  name: 'alexsWebapp'
+  name: 'NAME_OF_YOUR_WEB_APP'
   location: location
   properties: {
     serverFarmId: appServicePlan.id
