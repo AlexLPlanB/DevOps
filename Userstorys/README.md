@@ -11,7 +11,7 @@ Zuerst müssen die notwendigen Eigenschaften definiert werden:
     $containerName = "DEIN_CONTAINER_NAME"
     $destinationPath = "Userstorys\two_three\response.json"
 
-Danach loggen wir uns in Azure ein und löschen den Inhalt der response.json datei:
+Danach loggen wir uns in Azure ein und löschen den Inhalt der response.json Datei:
 
     az login
     Set-Content -Path $destinationPath -Value ""
@@ -22,7 +22,7 @@ Daraufhin senden wir ausgehend von unserem Gerät die Nachricht an das IoT Hub:
     az iot device send-d2c-message --hub-name $iotHubName --device-id $deviceId --data $message
 
     
-Nun werden wir die aktuelle Zeit abspeichern, um die Nachricht anschließend nach der Uhrzeit zu benennen. Dies ermöglicht einen besseren Überblick über alle Nachrichten und vermeidet doppelte Benennungen:
+Nun werden wir die aktuelle Zeit abspeichern, da die Nachricht in unserem Blob nach der Aktuellen Zeit bennant wird und wir sie so leicht finden können:
 
     #File Pfad mithilfe der UTC-Zeit ermitteln
     $DateTime = Get-Date
@@ -36,7 +36,7 @@ Nun werden wir die aktuelle Zeit abspeichern, um die Nachricht anschließend nac
     $filePath = "${iotHubName}/03/${utcString}.JSON"
 
     
-Nach dem Senden wollen wir nun kontrollieren, ob die Nachricht in Azure angekommen ist. Dafür laden wir den Inhalt des Blob-Storage herunter, in dem wir die Nachricht gespeichert haben.     Alternativ kann man auch in Azure nachsehen, ob die JSON-Datei angekommen ist:
+Nach dem Senden wollen wir nun kontrollieren, ob die Nachricht in Azure angekommen ist. Dafür laden wir den Inhalt des Blob-Storage herunter, in dem wir die Nachricht gespeichert haben. Alternativ kann man auch in Azure nachsehen, ob die JSON-Datei angekommen ist:
 
     #Blob downloaden zu einem File
     Write-Host "Testing if Message was Delivered Successfully"
