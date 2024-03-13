@@ -5,17 +5,17 @@ param (
 function DeployTestToDev {
     Write-Host "Deploying to Dev environment..."
     az deployment group create --resource NAME_OF_YOUR_RESSOURCE_GROUP --template-file Userstorys\two_three\iotsetup.bicep --parameters Userstorys\two_three\dev.json --confirm-with-what-if
-}
+} # Die Pfade müssen eventuell angepasst werden
  
 function DeployTestToTest {
     Write-Host "Deploying to Test environment..."
     az deployment group create --resource NAME_OF_YOUR_RESSOURCE_GROUP --template-file Userstorys\two_three\iotsetup.bicep --parameters Userstorys\two_three\test.json --confirm-with-what-if
-}
+} # Die Pfade müssen eventuell angepasst werden
  
 function DeployTestToMain {
     Write-Host "Deploying to Prod environment..."
     az deployment group create --resource NAME_OF_YOUR_RESSOURCE_GROUP --template-file Userstorys\two_three\iotsetup.bicep --parameters Userstorys\two_three\main.json --confirm-with-what-if
-}
+} # Die Pfade müssen eventuell angepasst werden
  
 if ($environment -eq 'dev') {
     DeployTestToDev
