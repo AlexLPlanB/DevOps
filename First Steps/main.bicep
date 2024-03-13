@@ -17,4 +17,6 @@ resource blobConatiner 'Microsoft.Storage/storageAccounts/blobServices/container
   name: '${name}/default/NAME_OF_YOUR_BLOB' // Benenne deinen Blob
 }
 
-output storageId string = storageAccount.id
+
+// Um das Script auszuführen benutze folgenden Befehl: 
+// az group deployment create --resource-group NAME_OF_YOUR_RESSOURCE_GROUP --template-file .\script.bicep --mode Complete    
