@@ -30,3 +30,7 @@ elseif ($environment -eq 'main') {
 else {
     Write-Host "Invalid environment parameter. Please use 'dev', 'test', or 'main'."
 }
+
+// Um das PowerShell Script auszuführen benutze:
+// ./createWebApp.ps1 -Environment dev  
+// dev, test oder main als Environment möglich   
