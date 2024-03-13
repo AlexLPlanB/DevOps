@@ -1,9 +1,9 @@
 $iotHubName = "YOUR_IOT_HUB_HERE"
 $storage = "YOUR_STORAGE_NAME_HERE"
 $deviceId = "YOUR_DEVICE_NAME_HERE"
-$message = ".\Userstorys\two_three\message.json"
+$message = ".\Userstorys\two_three\message.json" # Der Pfad muss eventuell angepasst werden
 $containerName = "NAME_OF_YOUR_BLOB"
-$destinationPath = "response.json"
+$destinationPath = "response.json" # Der Pfad muss eventuell angepasst werden
 
 
 function SendAndTestMessageToAzure {
